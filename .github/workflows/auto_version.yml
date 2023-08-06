@@ -15,8 +15,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "Your Name"
-          git config --global user.email "your.email@example.com"
+          git config --global user.name "elyas-hanafi"
+          git config --global user.email "eliinsta79@gmail.com"
 
       - name: Get previous tag
         id: previous_tag
