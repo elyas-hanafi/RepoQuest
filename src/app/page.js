@@ -1,5 +1,10 @@
+import Button from '@/components/Button/Button';
 import React from 'react';
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Button />
+    </div>
+  );
 }
