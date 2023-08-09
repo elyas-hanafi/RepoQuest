@@ -1,45 +1,30 @@
-name: Firebase CI
+name: Deploy Next.js to Firebase Hosting
 
 on:
   push:
-    branches: master
+    branches:
+      - main # Adjust the branch name as needed
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js version ${{ matrix.node-version }}
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 16.x # Use a Node.js version that suits your project
 
-      - run: npm i
-      - run: npm install -g firebase-tools
-      - run: npm run build
-      - name: Archive Build
-        uses: actions/upload-artifact@v2
-        with:
-          name: build
-          path: build
+      - name: Install Dependencies
+        run: npm ci
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Download Build
-        uses: actions/download-artifact@v2
-        with:
-          name: .next
-          path: .next
-      - name: Deploy to Firebase
+      - name: Build Next.js App
+        run: npm run build
+
+      - name: Deploy to Firebase Hosting
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
