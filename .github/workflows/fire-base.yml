@@ -3,7 +3,7 @@ name: Deploy Next.js to Firebase Hosting
 on:
   push:
     branches:
-      - main # Adjust the branch name as needed
+      - master # Adjust the branch name as needed
 
 jobs:
   build_and_deploy:
