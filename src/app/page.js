@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <section></section>
+      <section>
+        <div></div>
+      </section>
     </div>
   );
 }
