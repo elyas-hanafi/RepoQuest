@@ -26,7 +26,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: .next
+          path: build
 
   deploy:
     name: Deploy
@@ -38,7 +38,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build
-          path: .next
+          path: build
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
