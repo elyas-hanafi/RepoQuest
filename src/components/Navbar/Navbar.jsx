@@ -121,7 +121,7 @@ export default function Navbar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.1rem',
-              fontSize: '25px',
+              fontSize: '1.5rem',
               color: 'inherit',
               textDecoration: 'none',
             }}

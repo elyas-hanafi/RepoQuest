@@ -1,17 +1,17 @@
 import Navbar from '@/components/Navbar/Navbar';
-import { Box, Container } from '@mui/material';
+import { Box, Button, Container } from '@mui/material';
 import React from 'react';
-import AnimatText from '../components/Navbar/AnimatText/AnimatText';
-
+import AnimatedText from '../components/AnimatedText/AnimatedText';
+import Link from 'next/link';
 export default function Home() {
   return (
     <>
       <Navbar />
-
       <Box
         sx={{
           width: '100%',
           height: '100vh',
+          background: 'linear-gradient(to right bottom, #c31432, #240b36)',
         }}
       >
         <Container
@@ -20,10 +20,28 @@ export default function Home() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            flexDirection: 'column',
             height: '100%',
           }}
         >
-          <AnimatText text="Navigating GitHub's Projects by Topics & Technologies" />
+          <AnimatedText text="Navigating GitHub's Projects by Topics & Technologies" />
+          <Link href={`/ProjectList`}>
+            <Button
+              variant="outlined"
+              sx={{
+                color: 'white',
+                borderColor: 'white',
+                marginTop: '2rem',
+                '&:hover': {
+                  borderColor: 'white',
+                  color: 'black',
+                  backgroundColor: 'white',
+                },
+              }}
+            >
+              Lets Go
+            </Button>
+          </Link>
         </Container>
       </Box>
     </>
