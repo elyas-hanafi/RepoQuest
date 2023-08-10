@@ -16,9 +16,8 @@ import {
   createTheme,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { ThemeProvider } from '@emotion/react';
 
-const pages = ['Products', 'Contact Us', 'Blog'];
+const pages = ['Home', 'Contact Us', 'Blog', 'Search'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function Navbar() {
@@ -71,7 +70,7 @@ export default function Navbar() {
               textDecoration: 'none',
             }}
           >
-            Repo Quest
+            RepoQuest
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -127,7 +126,7 @@ export default function Navbar() {
               textDecoration: 'none',
             }}
           >
-            CodeQuest
+            RepoQuest
           </Typography>
           <Box
             sx={{
