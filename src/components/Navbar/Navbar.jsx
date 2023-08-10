@@ -108,7 +108,7 @@ export default function Navbar() {
               ))}
             </Menu>
           </Box>
-          <CodeIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+
           <Typography
             variant="h5"
             noWrap
