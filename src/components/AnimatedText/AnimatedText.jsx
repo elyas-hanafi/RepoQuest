@@ -2,7 +2,7 @@
 import { Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
-import { Preahvihear } from '@next/font/google';
+import { Preahvihear } from 'next/font/google';
 
 const fonts = Preahvihear({ subsets: ['latin'], weight: ['400'] });
 const quote = {

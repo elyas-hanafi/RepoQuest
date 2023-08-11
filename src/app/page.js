@@ -27,7 +27,7 @@ export default function Home() {
         >
           <GithubLogo />
           <AnimatedText text="Navigating GitHub's Projects by Topics & Technologies" />
-          <Link href={`/ProjectList`}>
+          <Link href={`/projectList`}>
             <Button
               variant="outlined"
               sx={{

@@ -16,8 +16,14 @@ import {
   createTheme,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import Link from 'next/link';
 
-const pages = ['Home', 'Contact Us', 'Blog', 'Search'];
+const pages = [
+  { page: 'Home', link: '/' },
+  { page: 'Blog', link: '/blog' },
+  { page: 'Search', link: '/projectList' },
+  { page: 'Contact Us', link: '/contact' },
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function Navbar() {
@@ -102,8 +108,10 @@ export default function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.page}>
+                  <Link href={page.link}>
+                    <Typography textAlign="center">{page.page}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -136,13 +144,18 @@ export default function Navbar() {
             }}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
+              <Link
+                href={page.link}
+                key={page.page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', mx: 3 }}
+                style={{ textDecoration: 'none' }}
               >
-                {page}
-              </Button>
+                <Button
+                  style={{ my: 2, color: 'white', display: 'block', mx: 3 }}
+                >
+                  {page.page}
+                </Button>
+              </Link>
             ))}
           </Box>
           {/* User Icon */}

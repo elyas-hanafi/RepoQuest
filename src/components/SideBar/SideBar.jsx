@@ -4,10 +4,13 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
+import { Preahvihear } from 'next/font/google';
 
 import {
+  Checkbox,
   FormControl,
   FormControlLabel,
+  FormGroup,
   InputLabel,
   MenuItem,
   Select,
@@ -82,6 +85,9 @@ const techStack = [
   'Heroku',
   'Netlify',
 ];
+
+const fonts = Preahvihear({ subsets: ['latin'], weight: ['400'] });
+
 export default function SideBar() {
   const [state, setState] = React.useState({
     right: false,
@@ -184,6 +190,11 @@ export default function SideBar() {
         </Select>
       </FormControl>
       <Divider sx={{ backgroundColor: '#00000055', marginTop: '40px' }} />
+      {/* Check Box */}
+      <FormGroup sx={{ color: 'black', marginLeft: '10px' }}>
+        <FormControlLabel control={<Checkbox />} label="Most Contributors" />
+        <FormControlLabel control={<Checkbox />} label="Latest Update" />
+      </FormGroup>
     </Box>
   );
 
@@ -193,9 +204,26 @@ export default function SideBar() {
         <React.Fragment key={anchor}>
           <Button
             onClick={toggleDrawer(anchor, true)}
-            sx={{ position: 'absolute', bottom: '0px', right: '0px' }}
+            sx={{
+              position: 'fixed',
+              bottom: '3.2rem',
+              right: '3.2rem',
+              backgroundColor: 'white',
+              padding: '1.3rem 1rem',
+              borderRadius: '50%',
+              color: 'black',
+              fontWeight: 400,
+              '&:hover': {
+                border: '1px solid white',
+                color: 'white',
+                // backgroundColor: 'white',
+              },
+              fontFamily: fonts.style,
+            }}
+            // fontFamily={fonts.style}
           >
-            {anchor}
+            Search <br />
+            Now
           </Button>
           <Drawer
             anchor={anchor}
