@@ -3,14 +3,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+
 import {
   FormControl,
   FormControlLabel,
@@ -19,33 +13,6 @@ import {
   Select,
   TextField,
 } from '@mui/material';
-import { makeStyles } from '@mui/styles';
-
-// const useStyles = makeStyles((theme) => ({
-//   customInput: {
-//     '& .MuiOutlinedInput-root': {
-//       '& fieldset': {
-//         borderColor: 'transparent', // Change to your desired border color
-//         // borderWidth: '2px', // Change to your desired border width
-//       },
-//       '&:hover fieldset': {
-//         borderColor: 'transparent', // Change to your desired hover border color
-//       },
-//       '&.Mui-focused fieldset': {
-//         borderColor: '#ffcc00', // Change to your desired focused border color
-//       },
-//       '&.Mui-focused': {
-//         color: 'black',
-//       },
-//     },
-//     '& .MuiInputLabel-root': {
-//       color: '#555', // Change to your desired label color
-//     },
-//     '& .MuiInputLabel-root.Mui-focused': {
-//       color: '#ffcc00', // Change to your desired focused label color
-//     },
-//   },
-// }));
 
 const language = [
   'JavaScript',
