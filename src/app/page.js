@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar/Navbar';
 import { Box, Button, Container, Typography } from '@mui/material';
 import React from 'react';
 import AnimatedText from '../components/AnimatedText/AnimatedText';
@@ -8,7 +7,6 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Box
         sx={{
           width: '100%',
@@ -51,7 +49,7 @@ export default function Home() {
             variant="h4"
             sx={{
               position: 'absolute',
-              bottom: '10px',
+              bottom: '0.8rem',
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.1rem',
