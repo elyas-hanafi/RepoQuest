@@ -50,11 +50,11 @@ export default function Home() {
             variant="h4"
             sx={{
               position: 'absolute',
-              bottom: '15px',
+              bottom: '5px',
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.1rem',
-              fontSize: '1rem',
+              fontSize: '0.8rem',
               color: 'white',
             }}
           >
