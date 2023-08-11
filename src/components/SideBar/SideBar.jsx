@@ -206,8 +206,8 @@ export default function SideBar() {
             onClick={toggleDrawer(anchor, true)}
             sx={{
               position: 'fixed',
-              bottom: '3.2rem',
-              right: '3.2rem',
+              bottom: '2.8rem',
+              right: '2.8rem',
               backgroundColor: 'white',
               padding: '1.3rem 1rem',
               borderRadius: '50%',
