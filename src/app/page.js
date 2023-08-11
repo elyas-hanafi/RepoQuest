@@ -51,7 +51,7 @@ export default function Home() {
             variant="h4"
             sx={{
               position: 'absolute',
-              bottom: '0px',
+              bottom: '10px',
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.1rem',
