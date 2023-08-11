@@ -1,5 +1,11 @@
 'use client';
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Skeleton,
+  Typography,
+} from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
 
