@@ -208,19 +208,18 @@ export default function SideBar() {
               position: 'fixed',
               bottom: '2.8rem',
               right: '2.8rem',
-              backgroundColor: 'white',
+              backgroundColor: 'black',
               padding: '1.3rem 1rem',
               borderRadius: '50%',
-              color: 'black',
+              color: 'white',
               fontWeight: 400,
               '&:hover': {
-                border: '1px solid white',
-                color: 'white',
-                // backgroundColor: 'white',
+                border: '1px solid black',
+                color: 'black',
               },
               fontFamily: fonts.style,
+              zIndex: 1000,
             }}
-            // fontFamily={fonts.style}
           >
             Search <br />
             Now

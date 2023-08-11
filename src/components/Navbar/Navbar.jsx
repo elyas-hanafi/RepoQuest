@@ -17,6 +17,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 const pages = [
   { page: 'Home', link: '/' },
@@ -51,6 +52,7 @@ export default function Navbar() {
       color="secondary"
       sx={{ backgroundColor: '#000000' }}
     >
+      <ProgressBar />
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <CodeIcon
