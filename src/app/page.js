@@ -1,8 +1,10 @@
 import Navbar from '@/components/Navbar/Navbar';
-import { Box, Button, Container } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import React from 'react';
 import AnimatedText from '../components/AnimatedText/AnimatedText';
+import GithubLogo from '../components/GithubLogo/GithubLogo';
 import Link from 'next/link';
+
 export default function Home() {
   return (
     <>
@@ -24,6 +26,7 @@ export default function Home() {
             height: '100%',
           }}
         >
+          <GithubLogo />
           <AnimatedText text="Navigating GitHub's Projects by Topics & Technologies" />
           <Link href={`/ProjectList`}>
             <Button
@@ -32,6 +35,7 @@ export default function Home() {
                 color: 'white',
                 borderColor: 'white',
                 marginTop: '2rem',
+                textDecoration: 'none',
                 '&:hover': {
                   borderColor: 'white',
                   color: 'black',
@@ -42,6 +46,20 @@ export default function Home() {
               Lets Go
             </Button>
           </Link>
+          <Typography
+            variant="h4"
+            sx={{
+              position: 'absolute',
+              bottom: '15px',
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.1rem',
+              fontSize: '1rem',
+              color: 'white',
+            }}
+          >
+            Discover, Learn, Collaborate.
+          </Typography>
         </Container>
       </Box>
     </>
