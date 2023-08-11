@@ -14,6 +14,7 @@ export default function Home() {
           width: '100%',
           height: '100vh',
           background: 'linear-gradient(to right bottom, #c31432, #240b36)',
+          position: 'relative',
         }}
       >
         <Container
@@ -50,7 +51,7 @@ export default function Home() {
             variant="h4"
             sx={{
               position: 'absolute',
-              bottom: '5px',
+              bottom: '0px',
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.1rem',
