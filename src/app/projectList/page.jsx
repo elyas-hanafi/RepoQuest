@@ -1,6 +1,7 @@
 import React from 'react';
-import SideBar from '../../components/SideBar/SideBar';
-import { Box, Card, Container, Grid, Skeleton } from '@mui/material';
+import SideBar from '@/components/SideBar/SideBar';
+import SkeletonSearchPage from '@/components/Skeleton/SkeletonSearchPage';
+import { Box, Card, Container, Grid } from '@mui/material';
 import CardImageSideBySide from '../../components/Card/Card';
 
 export default function ProjectList() {
@@ -26,53 +27,8 @@ export default function ProjectList() {
           {/* Add more Grid items with SideBySideCard components as needed */}
           {/* </Grid> */}
 
-          {/* Skeleton Part */}
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              display: 'flex',
-              height: '100%',
-              width: '100%',
-              paddingTop: '80px',
-              marginTop: '20px',
-              zIndex: 0,
-            }}
-          >
-            <Grid item md={6} xs={12} sx={{ width: '50%', height: '14rem' }}>
-              <Skeleton
-                variant="rectangular"
-                width={'100%'}
-                height={'100%'}
-                sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
-              />
-            </Grid>
-            <Grid item md={6} xs={12} sx={{ width: '50%', height: '14rem' }}>
-              <Skeleton
-                variant="rectangular"
-                width={'100%'}
-                height={'100%'}
-                sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
-              />
-            </Grid>
-            <Grid item md={6} xs={12} sx={{ width: '50%', height: '14rem' }}>
-              <Skeleton
-                variant="rectangular"
-                width={'100%'}
-                height={'100%'}
-                sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
-              />
-            </Grid>
-            <Grid item md={6} xs={12} sx={{ width: '50%', height: '14rem' }}>
-              <Skeleton
-                variant="rectangular"
-                width={'100%'}
-                height={'100%'}
-                sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
-              />
-            </Grid>
-          </Grid>
-          {/* Skeleton Part */}
+          {/* Skeleton */}
+          <SkeletonSearchPage />
         </Container>
       </Box>
     </div>
