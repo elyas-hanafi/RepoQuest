@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
-import imageSrc from '@/img/logo.png';
+import imageSrc from '@/img/seconde-card-6.jpg';
 import Image from 'next/image';
 export default function CardImageSideBySide({ title, content }) {
   return (
@@ -22,8 +22,9 @@ export default function CardImageSideBySide({ title, content }) {
         <Image
           src={imageSrc}
           alt="Picture of the author"
-          style={{ width: '40%', objectFit: 'cover' }}
+          style={{ width: '45%', height: 'auto', objectFit: 'cover' }}
         />
+
         <CardContent sx={{ flex: 1 }}>
           <Typography variant="h6" component="div">
             {title}
