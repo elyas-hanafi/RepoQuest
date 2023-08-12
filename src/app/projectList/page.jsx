@@ -19,19 +19,54 @@ export default function ProjectList() {
           maxWidth="lg"
           sx={{ display: 'flex', justifyContent: 'center' }}
         >
-          {/* <Grid container spacing={2} sx={{ padding: '80px 0px' }}>
-            {/* <Grid item md={6} xs={12}>
+          <Grid container spacing={2} sx={{ padding: '80px 0px' }}>
+            <Grid item md={6} xs={12}>
               <CardImageSideBySide
                 imageSrc="url_to_image1.jpg"
                 title="Card Title 1"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
-            </Grid> */}
-          {/* Add more Grid items with SideBySideCard components as needed */}
-          {/* </Grid> */}
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <CardImageSideBySide
+                imageSrc="url_to_image1.jpg"
+                title="Card Title 1"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <CardImageSideBySide
+                imageSrc="url_to_image1.jpg"
+                title="Card Title 1"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <CardImageSideBySide
+                imageSrc="url_to_image1.jpg"
+                title="Card Title 1"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <CardImageSideBySide
+                imageSrc="url_to_image1.jpg"
+                title="Card Title 1"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <CardImageSideBySide
+                imageSrc="url_to_image1.jpg"
+                title="Card Title 1"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+            </Grid>
+            {/* Add more Grid items with SideBySideCard components as needed */}{' '}
+          </Grid>
 
           {/* Skeleton */}
-          <SkeletonSearchPage />
+          {/* <SkeletonSearchPage /> */}
         </Container>
       </Box>
     </div>

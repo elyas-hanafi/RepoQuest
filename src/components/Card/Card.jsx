@@ -8,8 +8,9 @@ import {
 } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
-
-export default function CardImageSideBySide({ imageSrc, title, content }) {
+import imageSrc from '@/img/logo.png';
+import Image from 'next/image';
+export default function CardImageSideBySide({ title, content }) {
   return (
     <motion.div
       initial={{ translateY: '30px', opacity: '0%' }}
@@ -17,12 +18,11 @@ export default function CardImageSideBySide({ imageSrc, title, content }) {
       whileTap={{ scale: 0.9 }}
       whileInView={{ translateY: '0px', opacity: '100%' }}
     >
-      <Card sx={{ display: 'flex', height: '15rem' }}>
-        <CardMedia
-          component="img"
-          sx={{ width: 150, objectFit: 'cover' }}
-          alt="Card Image"
-          image={imageSrc}
+      <Card sx={{ display: 'flex', height: '12rem' }}>
+        <Image
+          src={imageSrc}
+          alt="Picture of the author"
+          style={{ width: '40%', objectFit: 'cover' }}
         />
         <CardContent sx={{ flex: 1 }}>
           <Typography variant="h6" component="div">
