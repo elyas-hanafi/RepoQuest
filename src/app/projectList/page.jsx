@@ -25,18 +25,21 @@ export default function ProjectList() {
             </Grid> */}
           {/* Add more Grid items with SideBySideCard components as needed */}
           {/* </Grid> */}
+
+          {/* Skeleton Part */}
           <Grid
             container
             spacing={2}
             sx={{
               display: 'flex',
-              height: '15rem',
+              height: '100%',
               width: '100%',
               paddingTop: '80px',
               marginTop: '20px',
+              zIndex: 0,
             }}
           >
-            <Grid item md={6} xs={12} sx={{ width: '50%', height: '100%' }}>
+            <Grid item md={6} xs={12} sx={{ width: '50%', height: '14rem' }}>
               <Skeleton
                 variant="rectangular"
                 width={'100%'}
@@ -44,7 +47,7 @@ export default function ProjectList() {
                 sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
               />
             </Grid>
-            <Grid item md={6} xs={12} sx={{ width: '50%', height: '100%' }}>
+            <Grid item md={6} xs={12} sx={{ width: '50%', height: '14rem' }}>
               <Skeleton
                 variant="rectangular"
                 width={'100%'}
@@ -52,7 +55,7 @@ export default function ProjectList() {
                 sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
               />
             </Grid>
-            <Grid item md={6} xs={12} sx={{ width: '50%', height: '100%' }}>
+            <Grid item md={6} xs={12} sx={{ width: '50%', height: '14rem' }}>
               <Skeleton
                 variant="rectangular"
                 width={'100%'}
@@ -60,23 +63,7 @@ export default function ProjectList() {
                 sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
               />
             </Grid>
-            <Grid item md={6} xs={12} sx={{ width: '50%', height: '100%' }}>
-              <Skeleton
-                variant="rectangular"
-                width={'100%'}
-                height={'100%'}
-                sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
-              />
-            </Grid>
-            <Grid item md={6} xs={12} sx={{ width: '50%', height: '100%' }}>
-              <Skeleton
-                variant="rectangular"
-                width={'100%'}
-                height={'100%'}
-                sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
-              />
-            </Grid>
-            <Grid item md={6} xs={12} sx={{ width: '50%', height: '100%' }}>
+            <Grid item md={6} xs={12} sx={{ width: '50%', height: '14rem' }}>
               <Skeleton
                 variant="rectangular"
                 width={'100%'}
@@ -85,6 +72,7 @@ export default function ProjectList() {
               />
             </Grid>
           </Grid>
+          {/* Skeleton Part */}
         </Container>
       </Box>
     </div>

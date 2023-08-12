@@ -195,6 +195,23 @@ export default function SideBar() {
         <FormControlLabel control={<Checkbox />} label="Most Contributors" />
         <FormControlLabel control={<Checkbox />} label="Latest Update" />
       </FormGroup>
+
+      <Button
+        sx={{
+          color: 'black',
+          border: '1px solid black',
+          backgroundColor: 'transparent',
+          padding: '10px 20px',
+          marginLeft: '4.8rem',
+          marginTop: '4.8rem',
+          '&:hover': {
+            color: 'white',
+            backgroundColor: 'black',
+          },
+        }}
+      >
+        Search :){' '}
+      </Button>
     </Box>
   );
 
@@ -218,7 +235,7 @@ export default function SideBar() {
                 color: 'black',
               },
               fontFamily: fonts.style,
-              zIndex: 1000,
+              zIndex: 10,
             }}
           >
             Search <br />
