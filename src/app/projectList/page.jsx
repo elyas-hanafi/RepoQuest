@@ -23,7 +23,7 @@ export default function ProjectList() {
             <Grid item md={6} xs={12}>
               <CardImageSideBySide
                 imageSrc="url_to_image1.jpg"
-                title="Card Title 1"
+                title="Project Name"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
             </Grid>

@@ -226,7 +226,7 @@ export default function SideBar() {
               bottom: '2.8rem',
               right: '2.8rem',
               backgroundColor: 'black',
-              padding: '1.3rem 1rem',
+              padding: '1.3rem 1.3rem',
               borderRadius: '50%',
               color: 'white',
               fontWeight: 400,
@@ -238,7 +238,7 @@ export default function SideBar() {
               zIndex: 10,
             }}
           >
-            Search <br />
+            Filter <br />
             Now
           </Button>
           <Drawer

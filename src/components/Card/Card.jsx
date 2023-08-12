@@ -1,15 +1,12 @@
 'use client';
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Skeleton,
-  Typography,
-} from '@mui/material';
+import { Button, Card, CardContent, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
-import imageSrc from '@/img/seconde-card-6.jpg';
+import imageSrc from '@/img/testImg.jpg';
 import Image from 'next/image';
+import { Preahvihear } from 'next/font/google';
+
+const fonts = Preahvihear({ subsets: ['latin'], weight: ['400'] });
 export default function CardImageSideBySide({ title, content }) {
   return (
     <motion.div
@@ -26,12 +23,39 @@ export default function CardImageSideBySide({ title, content }) {
         />
 
         <CardContent sx={{ flex: 1 }}>
-          <Typography variant="h6" component="div">
+          <Typography
+            sx={{ fontSize: '1.4rem', marginBottom: '1.1rem' }}
+            variant="h5"
+            component="h5"
+            fontFamily={fonts.style}
+          >
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="p"
+            color="text.secondary"
+            sx={{
+              paddingTop: '20px',
+            }}
+          >
             {content}
           </Typography>
+          <Button
+            sx={{
+              display: 'block',
+              position: 'absolute',
+              bottom: 10,
+              right: 10,
+              color: 'white',
+              backgroundColor: 'black',
+              '&:hover': {
+                border: '1px solid black',
+                color: 'black',
+              },
+            }}
+          >
+            See More
+          </Button>
         </CardContent>
       </Card>
     </motion.div>
