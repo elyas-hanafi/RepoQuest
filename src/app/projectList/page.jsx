@@ -15,7 +15,10 @@ export default function ProjectList() {
         }}
       >
         <SideBar />
-        <Container maxWidth="lg">
+        <Container
+          maxWidth="lg"
+          sx={{ display: 'flex', justifyContent: 'center' }}
+        >
           {/* <Grid container spacing={2} sx={{ padding: '80px 0px' }}>
             {/* <Grid item md={6} xs={12}>
               <CardImageSideBySide

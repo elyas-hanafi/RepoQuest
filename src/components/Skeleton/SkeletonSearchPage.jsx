@@ -32,7 +32,8 @@ export default function SkeletonSearchPage() {
             sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
           />
         </Grid>
-        <Grid item md={6} xs={12} sx={{ width: '50%', height: '14rem' }}>
+
+        {/* <Grid item md={6} xs={12} sx={{ width: '50%', height: '14rem' }}>
           <Skeleton
             variant="rectangular"
             width={'100%'}
@@ -47,7 +48,7 @@ export default function SkeletonSearchPage() {
             height={'100%'}
             sx={{ backgroundColor: '#ffffff55', borderRadius: '10px' }}
           />
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   );
