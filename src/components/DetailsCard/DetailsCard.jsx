@@ -9,19 +9,50 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import imageSrc from '@/img/testImg.jpg';
 import { Preahvihear } from 'next/font/google';
-import styled from '@emotion/styled';
+import { styled } from '@mui/material/styles';
 
-const StyledGridXS = styled(Grid)(({ theme }) => ({
-  /* Alternative styles for the Grid component in xs screen size */
-}));
 const fonts = Preahvihear({ subsets: ['latin'], weight: ['400'] });
 
+const StyledGrid = styled(Grid)(({ theme }) => ({
+  /* Default styles for the Grid component */
+  //   height: '100px', // Default height
+}));
+
+const StyledGridImgSMImg = styled(Grid)(({ theme }) => ({
+  /* Alternative styles for the Grid component in sm screen size */
+  /* Responsive styles for the Grid component */
+  [theme.breakpoints.only('xs')]: {
+    height: '30%', // Height for xs
+  },
+  [theme.breakpoints.up('xs')]: {
+    height: '40%', // Height for sm
+  },
+
+  [theme.breakpoints.up('md')]: {
+    height: '100%', // Height for lg
+  },
+}));
+const StyledGridContentSM = styled(Grid)(({ theme }) => ({
+  /* Alternative styles for the Grid component in sm screen size */
+  [theme.breakpoints.only('xs')]: {
+    height: '70%', // Height for xs
+  },
+  [theme.breakpoints.up('xs')]: {
+    height: '60%', // Height for sm
+  },
+  [theme.breakpoints.up('md')]: {
+    height: '100%', // Height for lg
+  },
+}));
+
 export default function DetailsCard() {
-  //   const isXsScreen = useMediaQuery((theme) => theme.b);
+  const theme = useTheme();
 
   return (
     <>
@@ -30,19 +61,33 @@ export default function DetailsCard() {
         initial={{ translateY: '30px', opacity: '0%' }}
         transition={{ duration: 0.8, delay: 0.4 }}
         whileInView={{ translateY: '0px', opacity: '100%' }}
-        style={{ width: '90%', position: 'relative' }}
+        style={{
+          width: '90%',
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
       >
-        <Card sx={{ display: 'flex', height: '35rem', marginTop: '3rem' }}>
+        <Card
+          sx={{
+            display: 'flex',
+            height: '80%',
+            marginTop: '3rem',
+            position: 'relative',
+          }}
+        >
           <Grid container>
-            <Grid item md={6} xs={12}>
+            <StyledGridImgSMImg item md={6} xs={12}>
               <Image
                 src={imageSrc}
                 alt="Picture of the author"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{ width: '100%', objectFit: 'cover', height: '100%' }}
               />
-            </Grid>
-            <Grid item md={6} xs={12}>
-              <CardContent sx={{ flex: 1, width: 'auto', height: '100%' }}>
+            </StyledGridImgSMImg>
+
+            <StyledGridContentSM item md={6} xs={12}>
+              <CardContent sx={{ flex: 1, height: '100%' }}>
                 <Typography
                   sx={{ fontSize: '1rem', marginBottom: '1.1rem' }}
                   variant="h5"
@@ -78,7 +123,7 @@ export default function DetailsCard() {
                   See More
                 </Button>
               </CardContent>
-            </Grid>
+            </StyledGridContentSM>
           </Grid>
         </Card>
       </motion.div>
