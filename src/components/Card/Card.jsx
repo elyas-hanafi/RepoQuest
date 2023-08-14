@@ -5,6 +5,7 @@ import React from 'react';
 import imageSrc from '@/img/testImg.jpg';
 import Image from 'next/image';
 import { Preahvihear } from 'next/font/google';
+import Link from 'next/link';
 
 const fonts = Preahvihear({ subsets: ['latin'], weight: ['400'] });
 export default function CardImageSideBySide({ title, content }) {
@@ -40,13 +41,17 @@ export default function CardImageSideBySide({ title, content }) {
           >
             {content}
           </Typography>
-          <Button
-            sx={{
+
+          <Link
+            href={'projectList/details/1'}
+            style={{
               display: 'block',
               position: 'absolute',
               bottom: 10,
               right: 10,
               color: 'white',
+              padding: '10px 20px',
+              borderRadius: '4px',
               backgroundColor: 'black',
               '&:hover': {
                 border: '1px solid black',
@@ -55,7 +60,7 @@ export default function CardImageSideBySide({ title, content }) {
             }}
           >
             See More
-          </Button>
+          </Link>
         </CardContent>
       </Card>
     </motion.div>

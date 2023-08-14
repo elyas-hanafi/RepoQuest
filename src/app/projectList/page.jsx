@@ -3,6 +3,7 @@ import SideBar from '@/components/SideBar/SideBar';
 import SkeletonSearchPage from '@/components/Skeleton/SkeletonSearchPage';
 import { Box, Card, Container, Grid } from '@mui/material';
 import CardImageSideBySide from '../../components/Card/Card';
+import Link from 'next/link';
 
 export default function ProjectList() {
   return (
@@ -24,41 +25,6 @@ export default function ProjectList() {
               <CardImageSideBySide
                 imageSrc="url_to_image1.jpg"
                 title="Project Name"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              />
-            </Grid>
-            <Grid item md={6} xs={12}>
-              <CardImageSideBySide
-                imageSrc="url_to_image1.jpg"
-                title="Card Title 1"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              />
-            </Grid>
-            <Grid item md={6} xs={12}>
-              <CardImageSideBySide
-                imageSrc="url_to_image1.jpg"
-                title="Card Title 1"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              />
-            </Grid>
-            <Grid item md={6} xs={12}>
-              <CardImageSideBySide
-                imageSrc="url_to_image1.jpg"
-                title="Card Title 1"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              />
-            </Grid>
-            <Grid item md={6} xs={12}>
-              <CardImageSideBySide
-                imageSrc="url_to_image1.jpg"
-                title="Card Title 1"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              />
-            </Grid>
-            <Grid item md={6} xs={12}>
-              <CardImageSideBySide
-                imageSrc="url_to_image1.jpg"
-                title="Card Title 1"
                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
             </Grid>
