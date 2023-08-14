@@ -52,8 +52,6 @@ const StyledGridContentSM = styled(Grid)(({ theme }) => ({
 }));
 
 export default function DetailsCard() {
-  const theme = useTheme();
-
   return (
     <>
       {' '}
