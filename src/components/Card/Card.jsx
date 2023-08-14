@@ -43,7 +43,7 @@ export default function CardImageSideBySide({ title, content }) {
           </Typography>
 
           <Link
-            href={'projectList/details/1'}
+            href={'projectList/1'}
             style={{
               display: 'block',
               position: 'absolute',
