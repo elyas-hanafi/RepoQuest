@@ -1,8 +1,9 @@
-'use client';
 import { Box } from '@mui/material';
 import React from 'react';
 import DetailsCard from '@/components/DetailsCard/DetailsCard';
-export default function page({ params: { details } }) {
+export default function page({ params }) {
+  console.log(params);
+
   return (
     <>
       <Box
@@ -15,9 +16,17 @@ export default function page({ params: { details } }) {
           background: 'linear-gradient(to right bottom, #c31432, #240b36)',
         }}
       >
-        Page Number : {details}
+        Page Number : {params.slug}
         <DetailsCard />
       </Box>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  const posts = ['1', '2', '3'];
+
+  return posts.map((post) => ({
+    slug: post,
+  }));
 }
