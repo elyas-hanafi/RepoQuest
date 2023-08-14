@@ -12,7 +12,6 @@ export default function CardImageSideBySide({ title, content }) {
     <motion.div
       initial={{ translateY: '30px', opacity: '0%' }}
       transition={{ duration: 0.8, delay: 0.4 }}
-      whileTap={{ scale: 0.9 }}
       whileInView={{ translateY: '0px', opacity: '100%' }}
     >
       <Card sx={{ display: 'flex', height: '12rem' }}>
@@ -24,9 +23,9 @@ export default function CardImageSideBySide({ title, content }) {
 
         <CardContent sx={{ flex: 1 }}>
           <Typography
-            sx={{ fontSize: '1.4rem', marginBottom: '1.1rem' }}
+            sx={{ fontSize: '1rem', marginBottom: '1.1rem' }}
             variant="h5"
-            component="h5"
+            // component="h5"
             fontFamily={fonts.style}
           >
             {title}
@@ -35,6 +34,7 @@ export default function CardImageSideBySide({ title, content }) {
             variant="p"
             color="text.secondary"
             sx={{
+              fontSize: '1rem',
               paddingTop: '20px',
             }}
           >
