@@ -1,14 +1,7 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Container,
-  Typography,
-} from '@mui/material';
+import { Box } from '@mui/material';
 import React from 'react';
 import DetailsCard from '@/components/DetailsCard/DetailsCard';
-export default function page() {
+export default function page({ params: { details } }) {
   return (
     <>
       <Box
@@ -21,6 +14,7 @@ export default function page() {
           background: 'linear-gradient(to right bottom, #c31432, #240b36)',
         }}
       >
+        Page Number : {details}
         <DetailsCard />
       </Box>
     </>
