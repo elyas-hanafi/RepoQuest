@@ -64,13 +64,13 @@ export default function AboutUs() {
               fontFamily={fontsCabin.style}
             >
               Our website harnesses cutting-edge technologies to deliver an
-              intuitive and efficient user experience. We've employed Next.js
-              for seamless page transitions, Material-UI (MUI) for sleek and
-              responsive design elements, Framer Motion for engaging animations
-              that enhance interactivity, Redux Toolkit for state management,
-              and a robust CI/CD pipeline with GitHub Actions to ensure smooth
-              deployment. Additionally, Firebase powers our backend, ensuring
-              fast and reliable data retrieval.
+              intuitive and efficient user experience. We&apos;ve employed
+              Next.js for seamless page transitions, Material-UI (MUI) for sleek
+              and responsive design elements, Framer Motion for engaging
+              animations that enhance interactivity, Redux Toolkit for state
+              management, and a robust CI/CD pipeline with GitHub Actions to
+              ensure smooth deployment. Additionally, Firebase powers our
+              backend, ensuring fast and reliable data retrieval.
             </Typography>
             <Typography
               variant="h5"
@@ -198,10 +198,10 @@ export default function AboutUs() {
               }}
               fontFamily={fontsCabin.style}
             >
-              Our commitment to excellence doesn't stop here. We're dedicated to
-              continuously improving your experience. In the future, we have
-              exciting plans to roll out even more features and enhancements.
-              Stay tuned for:
+              Our commitment to excellence doesn&apos;t stop here. We&apos;re
+              dedicated to continuously improving your experience. In the
+              future, we have exciting plans to roll out even more features and
+              enhancements. Stay tuned for:
             </Typography>
             <Typography
               variant="h5"
