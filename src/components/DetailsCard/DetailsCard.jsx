@@ -94,109 +94,119 @@ export default function DetailsCard() {
     <>
       {' '}
       <ThemeProvider theme={theme}>
-        <motion.div
-          initial={{ translateY: '30px', opacity: '0%' }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          whileInView={{ translateY: '0px', opacity: '100%' }}
+        <div
           style={{
-            width: '90%',
             height: '100vh',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}
         >
-          <Card
-            sx={{
-              display: 'flex',
+          <motion.div
+            initial={{ translateY: '30px', opacity: '0%' }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            whileInView={{ translateY: '0px', opacity: '100%' }}
+            style={{
               height: '80%',
-              marginTop: '3rem',
-              position: 'relative',
+              width: '90%',
             }}
           >
-            <Grid container>
-              <StyledGridImgSM item md={6} xs={12}>
-                <Image
-                  src={imageSrc}
-                  alt="Picture of the author"
-                  style={{ width: '100%', objectFit: 'cover', height: '100%' }}
-                />
-              </StyledGridImgSM>
-
-              <StyledGridContentSM item md={6} xs={12}>
-                <CardContent sx={{ flex: 1, height: '100%' }}>
-                  <Typography
-                    sx={{ marginBottom: '1.1rem' }}
-                    variant="h4"
-                    // fontFamily={fonts.style}
-                    fontFamily={fontsCabin.style}
-                  >
-                    Project Name Project Name Project Name
-                  </Typography>
-                  <Typography
-                    variant="p"
-                    fontFamily={fontsCabin.style}
-                    sx={{
-                      paddingTop: '3%',
+            <Card
+              sx={{
+                display: 'flex',
+                height: '100%',
+                marginTop: '2rem',
+                position: 'relative',
+              }}
+            >
+              <Grid container>
+                <StyledGridImgSM item md={6} xs={12}>
+                  <Image
+                    src={imageSrc}
+                    alt="Picture of the author"
+                    style={{
+                      width: '100%',
+                      objectFit: 'cover',
+                      height: '100%',
                     }}
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Aliquam ducimus assumenda est provident facilis iste
-                    repellat vero aspernatur dicta libero.
-                  </Typography>
-                  <div>
+                  />
+                </StyledGridImgSM>
+
+                <StyledGridContentSM item md={6} xs={12}>
+                  <CardContent sx={{ flex: 1, height: '100%' }}>
                     <Typography
-                      variant="h5"
+                      sx={{ marginBottom: '1.1rem' }}
+                      variant="h4"
+                      // fontFamily={fonts.style}
+                      fontFamily={fontsCabin.style}
+                    >
+                      Project Name Project Name Project Name
+                    </Typography>
+                    <Typography
+                      variant="p"
                       fontFamily={fontsCabin.style}
                       sx={{
-                        paddingTop: '6%',
+                        paddingTop: '3%',
                       }}
                     >
-                      What technologies ?
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aliquam ducimus assumenda est provident facilis iste
+                      repellat vero aspernatur dicta libero.
                     </Typography>
-                    <div
+                    <div>
+                      <Typography
+                        variant="h5"
+                        fontFamily={fontsCabin.style}
+                        sx={{
+                          paddingTop: '6%',
+                        }}
+                      >
+                        What technologies ?
+                      </Typography>
+                      <div
+                        style={{
+                          paddingTop: '1.2rem',
+                        }}
+                      >
+                        {frontEndTechnologies.map((tech) => (
+                          <>
+                            <Typography
+                              fontFamily={fontsCabin.style}
+                              variant="span"
+                            >
+                              {tech.name}
+                            </Typography>{' '}
+                            ,
+                          </>
+                        ))}
+                      </div>
+                    </div>
+                    <Link
+                      href={`/home`}
                       style={{
-                        paddingTop: '1.2rem',
+                        display: 'block',
+                        position: 'absolute',
+                        bottom: 10,
+                        right: 10,
+                        color: 'white',
+                        backgroundColor: 'black',
+                        '&:hover': {
+                          border: '1px solid black',
+                          color: 'black',
+                        },
+                        textDecoration: 'none',
+                        padding: '10px 20px',
+                        borderRadius: '5px',
                       }}
                     >
-                      {frontEndTechnologies.map((tech) => (
-                        <>
-                          <Typography
-                            fontFamily={fontsCabin.style}
-                            variant="span"
-                          >
-                            {tech.name}
-                          </Typography>{' '}
-                          ,
-                        </>
-                      ))}
-                    </div>
-                  </div>
-                  <Link
-                    href={`/home`}
-                    style={{
-                      display: 'block',
-                      position: 'absolute',
-                      bottom: 10,
-                      right: 10,
-                      color: 'white',
-                      backgroundColor: 'black',
-                      '&:hover': {
-                        border: '1px solid black',
-                        color: 'black',
-                      },
-                      textDecoration: 'none',
-                      padding: '10px 20px',
-                      borderRadius: '5px',
-                    }}
-                  >
-                    Github Page
-                  </Link>
-                </CardContent>
-              </StyledGridContentSM>
-            </Grid>
-          </Card>
-        </motion.div>
+                      Github Page
+                    </Link>
+                  </CardContent>
+                </StyledGridContentSM>
+              </Grid>
+            </Card>
+          </motion.div>
+        </div>
       </ThemeProvider>
     </>
   );

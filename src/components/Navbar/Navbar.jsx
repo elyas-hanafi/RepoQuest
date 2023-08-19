@@ -23,7 +23,7 @@ const pages = [
   { page: 'Home', link: '/' },
   { page: 'Blog', link: '/blog' },
   { page: 'Search', link: '/projectList' },
-  { page: 'Contact Us', link: '/contact' },
+  { page: 'About Us', link: '/about-us' },
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
