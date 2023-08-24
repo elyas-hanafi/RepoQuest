@@ -3,6 +3,7 @@ import React from 'react';
 import AnimatedText from '../components/AnimatedText/AnimatedText';
 import GithubLogo from '../components/GithubLogo/GithubLogo';
 import Link from 'next/link';
+import DeepChild from '@/theme/CustomComponents';
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
           }}
         >
           <GithubLogo />
+          <DeepChild />
           <AnimatedText text="Navigating GitHub's Projects by Topics & Technologies" />
           <Link href={`/projectList`}>
             <Button
