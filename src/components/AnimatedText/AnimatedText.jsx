@@ -31,6 +31,7 @@ const singleWord = {
     },
   },
 };
+
 export default function AnimatedText({ text }) {
   return (
     <>
